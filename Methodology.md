@@ -20,7 +20,7 @@ For the problem setup, the number of states and their dimensions must be defined
 
 The (log) prior function in this code assumes normalised normal distribution prior PDFs based on $\sigma$ and $\mu$ are desired - useful when solving for functions like polynomials, where it is not necessarily reasonable to provide upper and lower bounds for a flat uninformative prior. If a different distribution is desired, the problem setup may require the definition of other variables. Effectively, it is finding: 
 
-\[ \text{log(prior)} =  -0.5\text{log}(2\pi) -0.5\text{log}(\sigma^2) - 0.5\frac{(x-\mu)^2}{\sigma^2} \]
+ $\text{log(prior)} =  -0.5\text{log}(2\pi) -0.5\text{log}(\sigma^2) - 0.5\frac{(x-\mu)^2}{\sigma^2} $
 
 The (log) likelihood function in this code assumes Gaussian data also. Unlike the prior, the likelihood function is based on the experimental data and places it in comparison to values calculated using the G matrices, following the same basic form as the prior function above. The (log) posterior function simply sums the log prior and log likelihood functions together. 
 
